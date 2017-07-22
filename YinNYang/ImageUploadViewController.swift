@@ -14,6 +14,9 @@ class ImageUploadViewController: UIViewController, UINavigationControllerDelegat
     @IBOutlet weak var imageView: UIImageView!
     var image: UIImage!
     
+    
+
+    
     //This function is loading this view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +44,7 @@ class ImageUploadViewController: UIViewController, UINavigationControllerDelegat
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toBrowsePage" {
+        if segue.identifier == "Yang" {
             //dvc: destination view controller
             let dvc = segue.destination as! ResultViewController
             dvc.newImage = imageView.image
@@ -60,7 +63,7 @@ class ImageUploadViewController: UIViewController, UINavigationControllerDelegat
         imageView.image = image
        // self.dismiss(animated: true, completion: nil)
         self.dismiss(animated: true) { 
-            self.performSegue(withIdentifier: "toBrowsePage", sender: self)
+            self.performSegue(withIdentifier: "Yang", sender: self)
 
         }
     }

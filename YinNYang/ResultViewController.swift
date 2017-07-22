@@ -9,16 +9,21 @@
 import Foundation
 import UIKit
 
-var yang = Yang()
 class ResultViewController: UIViewController{
     
-    var yang = Yang()
-
+    var user: User?
+    var movie  = String()
+    var age : Int = 0
+    var color = String()
+    
+    
     var newImage: UIImage?
     
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var rightImageView: UIImageView!
+    
+    @IBOutlet weak var textView: UITextView!
     
     
     override func viewDidLoad() {
@@ -34,6 +39,9 @@ class ResultViewController: UIViewController{
             rightImageView.image = RandomImage.randomImageView()
             //imgV.image = faceBook.randomFactImage()
         }
+
+       textView.text = "My favorite movie is \(user?.movie) \nMy favorite color is \(user?.color)"
+        
     }
     @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
         
