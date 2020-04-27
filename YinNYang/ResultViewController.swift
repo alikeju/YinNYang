@@ -37,20 +37,9 @@ class ResultViewController: UIViewController{
         
         if let image = newImage{
             rightImageView.image = RandomImage.randomImageView()
-            //imgV.image = faceBook.randomFactImage()
         }
 
        textView.text = "My favorite movie is \(user?.movie) \nMy favorite color is \(user?.color)"
         
-    }
-    @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
-        
-        // for now, simply defining the method is sufficient.
-        // we'll add code later
-        
-    }
-    
-    
-    
-    
+    }    
 }
